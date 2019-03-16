@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 struct Node {
   int data;
@@ -21,10 +22,10 @@ void push( Node * & head, int data ) {
 
 void printList( Node * head ) {
   while( head ) {
-    std::cout << head->data << "-->";
+   cout << head->data << "-->";
     head = head->next;
   }
-  std::cout << "NULL" << std::endl;
+  cout << "NULL" << std::endl;
 }
 
 void reverseIter( Node * & head ) {
@@ -63,13 +64,13 @@ int main() {
   push( head, 3 );
   push( head, 4 );
   push( head, 5 );
-  std::cout << "Before Reversing Linkedlist:      ";
+  cout << "Before Reversing Linkedlist:      ";
   printList( head );
   reverseIter( head );
-  std::cout << "After Reversing Linkedlist once:  ";
+  cout << "After Reversing Linkedlist once:  ";
   printList( head );
   reverseRecur( head );
-  std::cout << "After Reversing Linkedlist twice: ";
+  cout << "After Reversing Linkedlist twice: ";
   printList( head );
   return 0;
 }
